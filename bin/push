@@ -1,0 +1,1 @@
+aws s3 cp script-${VERSION}.py s3://armory-sales-repo/other
