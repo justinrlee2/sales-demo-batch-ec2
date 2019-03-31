@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "${BUILD_ID}-$(date +%s)" > VERSION
-cp script.py script-${VERSION}.py
+cp script.py script-$(cat VERSION).py
