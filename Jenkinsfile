@@ -3,6 +3,7 @@ node {
         checkout scm
         sh("ls -alh")
         sh("bin/build")
+        sh("ls -alh")
     }
 
     stage('Push') {
