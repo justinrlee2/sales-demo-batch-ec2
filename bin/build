@@ -5,7 +5,7 @@ cp script.py script-$(cat VERSION).py
 
 tee payload.json <<-EOF
 {
-    "artifact": "script-${VERSION}.py"
+    "artifact": "script-$(cat VERSION).py"
 }
 EOF
 
