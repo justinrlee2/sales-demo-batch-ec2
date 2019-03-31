@@ -9,5 +9,9 @@ node {
         sh("bin/push")
     }
     
+    stage('Archive') {
+        archiveArtifacts artifacts: "script-*.py", fingerprint: true   
+    }
+    
     cleanWs()
 }
