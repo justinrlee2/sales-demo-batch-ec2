@@ -11,7 +11,7 @@ node {
     }
     
     stage('Archive') {
-        archiveArtifacts artifacts: "script-*.py", fingerprint: true   
+        archiveArtifacts artifacts: "script-$(cat VERSION).py", fingerprint: true   
     }
     
     cleanWs()
