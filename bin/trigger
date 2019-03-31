@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Trigger the pipeline
+
+curl https://custom-demo-gate.justin.armory.io/webhooks/webhook/batch-ec2 \
+  -X POST \
+  -H 'content-type:application/json' \
+  -d @payload.json

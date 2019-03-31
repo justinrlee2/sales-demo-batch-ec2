@@ -2,3 +2,11 @@
 
 echo "${BUILD_ID}-$(date +%s)" > VERSION
 cp script.py script-$(cat VERSION).py
+
+tee payload.json <<-EOF
+{
+    "artifact": "script-${VERSION}.py"
+}
+EOF
+
+cat payload.json

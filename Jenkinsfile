@@ -10,6 +10,10 @@ node {
         sh("bin/push")
     }
     
+    stage('Trigger') {
+        sh("bin/trigger")
+    }
+
     stage('Archive') {
         archiveArtifacts artifacts: "script-${BUILD_ID}-*.py", fingerprint: true   
     }
